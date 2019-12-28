@@ -20,7 +20,7 @@ app.use(cors());
 /* Initializing the main project folder */
 app.use(express.static('website'));
 
-const port = 5500;
+const port = 5501;
 
 // TODO-Spin up the server
 const server = app.listen(port,listening);

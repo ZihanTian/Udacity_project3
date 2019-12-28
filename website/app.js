@@ -20,6 +20,7 @@ getWeather(baseURL,newZip, apiKey)
 .then(function(data){
     
     postData('/addData',{temperature:data.main.temp, date: newDate, user_response:userResponse })
+    
 })
 updateUI();
 }
@@ -64,7 +65,10 @@ const postData = async ( url = '', data = {})=>{
       const req = await fetch('/all')
       try{
           const allData = await req.json()
-          console.log(allData);
+          console.log(allData,'here i am');
+          console.log(allData.length);
+          let ind = allData.length;
+          console.log(ind,'deperate');
           document.getElementById('date').innerHTML = allData[0].date;
           document.getElementById('temp').innerHTML = allData[0].temperature;
           document.getElementById('content').innerHTML = allData[0].user_response;

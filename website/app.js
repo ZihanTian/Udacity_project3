@@ -21,8 +21,8 @@ getWeather(baseURL,newZip, apiKey)
     
     postData('/addData',{temperature:data.main.temp, date: newDate, user_response:userResponse })
     
-})
-updateUI();
+    
+}).then(data=>updateUI());
 }
 const getWeather = async (baseURL, zip, key)=>{
 
@@ -68,10 +68,14 @@ const postData = async ( url = '', data = {})=>{
           console.log(allData,'here i am');
           console.log(allData.length);
           let ind = allData.length;
-          console.log(ind,'deperate');
-          document.getElementById('date').innerHTML = allData[0].date;
-          document.getElementById('temp').innerHTML = allData[0].temperature;
-          document.getElementById('content').innerHTML = allData[0].user_response;
+          console.log(ind,'there is index');
+          //document.getElementById('date').innerHTML = allData[ind-1].date;
+          document.getElementById('date').innerHTML = allData.date;
+          //document.getElementById('temp').innerHTML = allData[ind-1].temperature;
+          document.getElementById('temp').innerHTML = allData.temperature;
+
+          //document.getElementById('content').innerHTML = allData[ind-1].user_response;
+          document.getElementById('content').innerHTML = allData.user_response;
 
       }catch(error){
           console.log("error",error)

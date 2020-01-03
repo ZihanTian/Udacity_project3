@@ -6,6 +6,7 @@ body{
 #app{
     display: grid;
     grid-auto-rows: minmax(150px, auto);
+    
     /*grid-template-columns:*/ 
     height:100vh;
     /*background: #f23557;*/
@@ -24,9 +25,13 @@ body{
 
 .entry{
     background: rgba(59, 74, 107, .4);
+    
 }
 
 #entryHolder{
+    height:100px;
+    
+    
 
 }
 
@@ -46,9 +51,14 @@ body{
 }
 
 .headline {
+    font-size: 55px;
+    /*text-align: center;*/
+    justify-self: center;
+    padding-top: 50px;
 
 }
 .title{
+    
 
 }
 
@@ -63,7 +73,7 @@ input{
     height: 60px;
     width: 320px;
     /*background:#22b2da;*/
-    color: yellow;
+    color: #f0d43a;
     font-size: 20px;
     font-family: 'Oswald', sans-serif;
     border: none;
@@ -71,7 +81,7 @@ input{
 
 button{
     width: 400px;
-    height: 100px;
+    height: 60px;
     background: #3b4a6b;
     color: #f0d43a;
     font-size: 26px;
